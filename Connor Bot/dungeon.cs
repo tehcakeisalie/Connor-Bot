@@ -13,7 +13,16 @@ namespace Connor_Bot
 {
     class dungeon
     {
-        /*if (command.Equals("c!dungeon"))
+        /*
+            struct _location
+    {
+        public string locationName;
+        public string description;
+        public int monsterID;
+    };
+         
+
+         if (command.Equals("c!dungeon"))
                 Playgame();
 
             async void Playgame()

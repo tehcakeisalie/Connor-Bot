@@ -18,12 +18,7 @@ namespace Connor_Bot
         public int health;
     };
 
-    struct _location
-    {
-        public string locationName;
-        public string description;
-        public int monsterID;
-    };
+
     class Program
     {
         public static void Main(string[] args)
@@ -77,7 +72,7 @@ namespace Connor_Bot
         }
 
 
-        private Task CommandCenter(SocketMessage message)
+        public Task CommandCenter(SocketMessage message)
         {
             string command = "";
             int lengthOfCommand = -1;
@@ -112,7 +107,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 35);
+            int randomPhilosophy = randm.Next(1, 48);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -256,11 +251,51 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"Hostile aliens would be partly a good thing, as we would fight them more than ourselves.");
                         break;
                     case 36:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($"Homeless people should just buy a house.\nDuh.\n-Thomes");
                         break;
                     case 37:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($"Why have many individual cheez-its?\nWhen you could just have a single cheez - them?\n-sonicatdrpepper");
                         break;
+                    case 38:
+                        message.Channel.SendMessageAsync($"If Adam and Eve had an argument, would it be a world war?\n-Seenmario66");
+                        break;
+                    case 39:
+                        message.Channel.SendMessageAsync($"A carrot is a long orange potato\n-sonicatdrpepper");
+                        break;
+                    case 40:
+                        message.Channel.SendMessageAsync($"Birthdays are fatal in large doses\n-Seenmario66");
+                        break;
+                    case 41:
+                        message.Channel.SendMessageAsync($"are you are a necrophile if you jack off while being dead inside?\n-Thomes");
+                        break;
+                    case 42:
+                        message.Channel.SendFileAsync(@"C:\Users\Connor\Pictures\Connor Bot\pizza.jpg");
+                        break;
+                    case 43:
+                        message.Channel.SendMessageAsync($"If there were no safety labels, the average iq would increase.\n-sonicatdrpepper");
+                        break;
+                    case 44:
+                        message.Channel.SendMessageAsync($"What if we all have theme music but we can't hear it because we aren't the main character?\n-Seenmario66");
+                        break;
+                    case 45:
+                        message.Channel.SendMessageAsync($"Snad > Sand\n-sonicatdrpepper");
+                        break;
+                    case 46:
+                        message.Channel.SendMessageAsync($"We should just print more money and give it to everyone. No more poor people.");
+                        break;
+                    case 47:
+                        message.Channel.SendMessageAsync($"This world was made for people who aren’t cursed with self awareness.\n-Thomes");
+                        break;
+                    case 48:
+                        message.Channel.SendMessageAsync($"Philosophy is either a great knowledge, or a giant shitpost.\n-Thomes");
+                        break;
+                    case 49:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 50:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+
                 }
             //tells you about your charm
             if (command.Equals("c!current charm level"))
@@ -417,7 +452,7 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync($@"There is now.");
 
             if (command.Equals("c!help"))
-                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!speed - roll a speed die from monopoly. My creator lost his.\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nI was just an excuse for my creator to screw around with C#. Don't expect much.");
+                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!speed - roll a speed die from monopoly. My creator lost his.\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!opponents - face off against challengers in a battle of complete random chance!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nI was just an excuse for my creator to screw around with C#. Don't expect much.");
 
             //Connor bot will roll dice
             Random Roll = new Random();
@@ -577,7 +612,101 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync($"Whomst hast called me?");
             }
 
+            _player player;
+            player.health = 50;
 
+            _player[] fighter = new _player[10];
+            fighter[1].ID = 1; fighter[1].name = "Glass Joe"; fighter[1].health = 5;
+            fighter[2].ID = 2; fighter[2].name = "Flat-Earther"; fighter[2].health = 15;
+            fighter[3].ID = 3; fighter[3].name = "Florida Man"; fighter[3].health = 20;
+            fighter[4].ID = 4; fighter[4].name = "Karen"; fighter[4].health = 25;
+            fighter[5].ID = 5; fighter[5].name = "White Supremacist"; fighter[5].health = 30;
+            fighter[6].ID = 6; fighter[6].name = "Twitter"; fighter[6].health = 35;
+            fighter[7].ID = 7; fighter[7].name = "Xi Jinping"; fighter[7].health = 40;
+            fighter[8].ID = 8; fighter[8].name = "Mike Tyson"; fighter[8].health = 50;
+            fighter[9].ID = 9; fighter[9].name = "Connor bot"; fighter[9].health = 1000;
+
+            if (command.Equals($"c!opponents"))
+                message.Channel.SendMessageAsync("here are your opponents:\n1. Glass Joe: You would have to try to lose against him.\n2. Flat-Earther. just let natural selection do it's thing.\n3. Florida Man. Careful. He may not look like it, but he could take on a crocodile on a whim.\n4. Karen. God forbid you ever actually meet one in retail.\n5. White Supremacist. He keeps asking me to define what a white supremacist is. It's you, dickhead.\n6. Twitter. One of the greatest evils out there.\n7. Xi Jinping. Would you look at that, I've been banned in China.\n8. Mike Tyson. The final boss.\nto fight any of these worthy contenders, simply put: c!fight (fighter name)");
+
+            if (command.Equals("pursue the truth"))
+                message.Channel.SendMessageAsync("https://sites.google.com/view/kjfdoflfsdhdklfkdasaslaskalals");
+            if (command.Equals("c!what's in the box?"))
+                message.Channel.SendMessageAsync($"Doest thou know what wrath you shall incur on this world?\n https://sites.google.com/view/kjljdhlkasjklskjhhdfjkdhkhdfkk");
+
+            int FID = fighter[1].ID;
+            Random whallop = new Random();
+            if (command.Equals("c!fight glass joe"))
+            {
+                FID = fighter[1].ID;
+                Fight();
+            }
+            if (command.Equals("c!fight flat-earther"))
+            {
+                FID = fighter[2].ID;
+                Fight();
+            }
+            if (command.Equals("c!fight florida man"))
+            {
+                FID = fighter[3].ID;
+                Fight();
+            }
+            if (command.Equals("c!fight karen"))
+            {
+                FID = fighter[4].ID;
+                Fight();
+            }
+            if (command.Equals("c!fight white supremacist"))
+            {
+                FID = fighter[5].ID;
+                Fight();
+            }
+            if (command.Equals("c!fight twitter"))
+            {
+                FID = fighter[6].ID;
+                Fight();
+            }
+            if (command.Equals("c!fight xi jinping"))
+            {
+                FID = fighter[7].ID;
+                Fight();
+            }
+            if (command.Equals("c!fight mike tyson"))
+            {
+                FID = fighter[8].ID;
+                Fight();
+            }
+            if (command.Equals("c!fight connor bot"))
+            {
+                FID = fighter[9].ID;
+                Fight();
+            }
+
+            async void Fight()
+            {
+                await message.Channel.SendMessageAsync($"\nYou take on {fighter[FID].name}! He has {fighter[FID].health} health!");
+                while (true)
+                {
+
+                    await message.Channel.SendMessageAsync($"Your health is: {player.health}. {fighter[FID].name}'s health is: {fighter[FID].health}");
+                    int damageToPlayer = whallop.Next(0, 10);
+                    int damageToFighter = whallop.Next(1, 10);
+                    player.health -= damageToPlayer;
+                    fighter[FID].health -= damageToFighter;
+                    await message.Channel.SendMessageAsync($"\nYou take {damageToPlayer} damage.\nThe {fighter[FID].name} takes {damageToFighter} damage.");
+
+                    if (fighter[FID].health <= 0)
+                    {
+                        await message.Channel.SendMessageAsync($"TKO! You have beaten {fighter[FID].name}!");
+                        return;
+                    }
+                    if (player.health <= 0)
+                    {
+                        await message.Channel.SendMessageAsync($"\n\n{fighter[FID].name} kicked the shit out of you. Pathetic.\n\n");
+                        return;
+                    }
+                }
+            }
 
             return Task.CompletedTask;
         }
