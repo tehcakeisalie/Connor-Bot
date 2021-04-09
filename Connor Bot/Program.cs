@@ -39,7 +39,6 @@ namespace Connor_Bot
 
         public async Task MainAsync()
         {
-
             _client = new DiscordSocketClient();
             _client.MessageReceived += CommandCenter;
             //await _client.SetGameAsync("with your perception of reality");
@@ -105,9 +104,10 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync($@"And in those days shall men seek death, and shall not find it; and shall desire to die, and death shall flee from them. Revelation 9:6");
 
 
+
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 48);
+            int randomPhilosophy = randm.Next(1, 49);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -290,18 +290,27 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"Philosophy is either a great knowledge, or a giant shitpost.\n-Thomes");
                         break;
                     case 49:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"in the future, Skyrim will be the new doom, and people will run it on literally anything with a screen");
                         break;
                     case 50:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 51:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 52:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 53:
                         message.Channel.SendMessageAsync($"");
                         break;
 
                 }
             //tells you about your charm
-            if (command.Equals("c!current charm level"))
+            if (command.Equals("current charm level"))
                 message.Channel.SendFileAsync("C:/Users/Connor/Pictures/Connor Bot/i sure do exist.png");
             //gives you directions to the nearest hell
-            if (command.Equals("c!kill me"))
+            if (command.Equals("kill me"))
                 message.Channel.SendMessageAsync("https://www.ikea.com/us/en/stores/");
 
 
@@ -452,7 +461,7 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync($@"There is now.");
 
             if (command.Equals("c!help"))
-                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!speed - roll a speed die from monopoly. My creator lost his.\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!opponents - face off against challengers in a battle of complete random chance!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nI was just an excuse for my creator to screw around with C#. Don't expect much.");
+                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!speed - roll a speed die from monopoly. My creator lost his.\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!opponents - face off against challengers in a battle of complete random chance!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nNow have fun with the shitpost of a bot I am!");
 
             //Connor bot will roll dice
             Random Roll = new Random();
@@ -597,7 +606,7 @@ namespace Connor_Bot
 
 
             if (command.Equals("kill connor bot"))
-                message.Channel.SendMessageAsync("!deadringer");
+                message.Channel.SendMessageAsync("c!deadringer");
 
 
             if (command.Equals("make me hurt"))
