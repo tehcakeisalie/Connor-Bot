@@ -459,31 +459,73 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync($@"There is now.");
 
             if (command.Equals("c!help"))
-                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!speed - roll a speed die from monopoly. My creator lost his.\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nNow have fun with the shitpost of a bot I am!");
+                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nNow have fun with the shitpost of a bot I am!");
 
             //Connor bot will roll dice
             Random Roll = new Random();
-            int randomRoll = Roll.Next(1, 6);
-            if (command.Equals("c!speed"))
+            int randomRoll = Roll.Next(1, 20);
+            if (command.StartsWith("c!8ball"))
                 switch (randomRoll)
                 {
                     case 1:
-                        message.Channel.SendMessageAsync($@"you have rolled a 1");
+                        message.Channel.SendMessageAsync($@"As I see it, yes.");
                         break;
                     case 2:
-                        message.Channel.SendMessageAsync($@"you have rolled a 2");
+                        message.Channel.SendMessageAsync($@"Ask again later.");
                         break;
                     case 3:
-                        message.Channel.SendMessageAsync($@"you have rolled a 3");
+                        message.Channel.SendMessageAsync($@"Better not tell you now.");
                         break;
                     case 4:
-                        message.Channel.SendMessageAsync($@"you have rolled a Mr. Monopoly");
+                        message.Channel.SendMessageAsync($@"Cannot predict now.");
                         break;
                     case 5:
-                        message.Channel.SendMessageAsync($@"you have rolled a bus");
+                        message.Channel.SendMessageAsync($@"Concentrate and ask again.");
                         break;
                     case 6:
-                        message.Channel.SendMessageAsync($@"you have rolled a Mr. Monopoly");
+                        message.Channel.SendMessageAsync($@"Don’t count on it.");
+                        break;
+                    case 7:
+                        message.Channel.SendMessageAsync($@"It is certain.");
+                        break;
+                    case 8:
+                        message.Channel.SendMessageAsync($@"It is decidedly so.");
+                        break;
+                    case 9:
+                        message.Channel.SendMessageAsync($@"Most likely.");
+                        break;
+                    case 10:
+                        message.Channel.SendMessageAsync($@"My reply is no.");
+                        break;
+                    case 11:
+                        message.Channel.SendMessageAsync($@"My sources say no.");
+                        break;
+                    case 12:
+                        message.Channel.SendMessageAsync($@"Outlook not so good.");
+                        break;
+                    case 13:
+                        message.Channel.SendMessageAsync($@"Outlook good.");
+                        break;
+                    case 14:
+                        message.Channel.SendMessageAsync($@"Reply hazy, try again.");
+                        break;
+                    case 15:
+                        message.Channel.SendMessageAsync($@"Signs point to yes.");
+                        break;
+                    case 16:
+                        message.Channel.SendMessageAsync($@"Very doubtful.");
+                        break;
+                    case 17:
+                        message.Channel.SendMessageAsync($@"Without a doubt.");
+                        break;
+                    case 18:
+                        message.Channel.SendMessageAsync($@"Yes.");
+                        break;
+                    case 19:
+                        message.Channel.SendMessageAsync($@"Yes – definitely.");
+                        break;
+                    case 20:
+                        message.Channel.SendMessageAsync($@"You may rely on it.");
                         break;
                 }
             //The bot reminds you it cannot feel
