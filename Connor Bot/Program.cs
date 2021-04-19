@@ -103,11 +103,9 @@ namespace Connor_Bot
             if (command.Equals("rule 34"))
                 message.Channel.SendMessageAsync($@"And in those days shall men seek death, and shall not find it; and shall desire to die, and death shall flee from them. Revelation 9:6");
 
-
-
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 49);
+            int randomPhilosophy = randm.Next(1, 50);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -192,7 +190,7 @@ namespace Connor_Bot
                         break;
 
                     case 21:
-                        message.Channel.SendMessageAsync($@"Any Pokemon can evolve to ghost type if you have a gun");
+                        message.Channel.SendMessageAsync($@"Any Pokemon can evolve to ghost type    if you have a gun");
                         break;
 
                     case 22:
@@ -293,7 +291,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"in the future, Skyrim will be the new doom, and people will run it on literally anything with a screen");
                         break;
                     case 50:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"Pixie sticks are child-friendly beer bongs");
                         break;
                     case 51:
                         message.Channel.SendMessageAsync($"");
@@ -461,7 +459,7 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync($@"There is now.");
 
             if (command.Equals("c!help"))
-                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!speed - roll a speed die from monopoly. My creator lost his.\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!opponents - face off against challengers in a battle of complete random chance!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nNow have fun with the shitpost of a bot I am!");
+                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!speed - roll a speed die from monopoly. My creator lost his.\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nNow have fun with the shitpost of a bot I am!");
 
             //Connor bot will roll dice
             Random Roll = new Random();
@@ -624,7 +622,7 @@ namespace Connor_Bot
             _player player;
             player.health = 50;
 
-            _player[] fighter = new _player[10];
+            _player[] fighter = new _player[11];
             fighter[1].ID = 1; fighter[1].name = "Glass Joe"; fighter[1].health = 5;
             fighter[2].ID = 2; fighter[2].name = "Flat-Earther"; fighter[2].health = 15;
             fighter[3].ID = 3; fighter[3].name = "Florida Man"; fighter[3].health = 20;
@@ -634,11 +632,12 @@ namespace Connor_Bot
             fighter[7].ID = 7; fighter[7].name = "Xi Jinping"; fighter[7].health = 40;
             fighter[8].ID = 8; fighter[8].name = "Mike Tyson"; fighter[8].health = 50;
             fighter[9].ID = 9; fighter[9].name = "Connor bot"; fighter[9].health = 1000;
+            fighter[10].ID = 10; fighter[10].name = "Chosen"; fighter[10].health = 50;
 
             if (command.Equals($"c!opponents"))
-                message.Channel.SendMessageAsync("here are your opponents:\n1. Glass Joe: You would have to try to lose against him.\n2. Flat-Earther. just let natural selection do it's thing.\n3. Florida Man. Careful. He may not look like it, but he could take on a crocodile on a whim.\n4. Karen. God forbid you ever actually meet one in retail.\n5. White Supremacist. He keeps asking me to define what a white supremacist is. It's you, dickhead.\n6. Twitter. One of the greatest evils out there.\n7. Xi Jinping. Would you look at that, I've been banned in China.\n8. Mike Tyson. The final boss.\nto fight any of these worthy contenders, simply put: c!fight (fighter name)");
+                message.Channel.SendMessageAsync("here are your opponents:\n1. Glass Joe: You would have to try to lose against him.\n2. Flat-Earther. just let natural selection do it's thing.\n3. Florida Man. Careful. He may not look like it, but he could take on a crocodile on a whim.\n4. Karen. God forbid you ever actually meet one in retail.\n5. White Supremacist. He keeps asking me to define what a white supremacist is. It's you, dickhead.\n6. Twitter. One of the greatest evils out there.\n7. Xi Jinping. Would you look at that, I've been banned in China.\n8. Mike Tyson. The final boss.\n666.P3R$U3 T43 TRUT4\nto fight any of these worthy contenders, simply put: c!fight (fighter name). To fight other users, put: c!fight (ping user)!");
 
-            if (command.Equals("pursue the truth"))
+            if (command.Contains("pursue the truth"))
                 message.Channel.SendMessageAsync("https://sites.google.com/view/kjfdoflfsdhdklfkdasaslaskalals");
             if (command.Equals("c!what's in the box?"))
                 message.Channel.SendMessageAsync($"Doest thou know what wrath you shall incur on this world?\n https://sites.google.com/view/kjljdhlkasjklskjhhdfjkdhkhdfkk");
@@ -688,21 +687,21 @@ namespace Connor_Bot
             if (command.Equals("c!fight connor bot"))
             {
                 FID = fighter[9].ID;
-                Fight();
+                Fight2();
             }
 
             async void Fight()
             {
-                await message.Channel.SendMessageAsync($"\nYou take on {fighter[FID].name}! He has {fighter[FID].health} health!");
+                await message.Channel.SendMessageAsync($"\nYou take on {fighter[FID].name}! They have {fighter[FID].health} health!");
                 while (true)
                 {
 
                     await message.Channel.SendMessageAsync($"Your health is: {player.health}. {fighter[FID].name}'s health is: {fighter[FID].health}");
                     int damageToPlayer = whallop.Next(0, 10);
-                    int damageToFighter = whallop.Next(1, 10);
+                    int damageToFighter = whallop.Next(0, 10);
                     player.health -= damageToPlayer;
                     fighter[FID].health -= damageToFighter;
-                    await message.Channel.SendMessageAsync($"\nYou take {damageToPlayer} damage.\nThe {fighter[FID].name} takes {damageToFighter} damage.");
+                    await message.Channel.SendMessageAsync($"\nYou take {damageToPlayer} damage.\n{fighter[FID].name} takes {damageToFighter} damage.");
 
                     if (fighter[FID].health <= 0)
                     {
@@ -716,6 +715,69 @@ namespace Connor_Bot
                     }
                 }
             }
+
+            async void Fight2()
+            {
+                await message.Channel.SendMessageAsync($"\nYou stand before {fighter[FID].name}. His godlike form contains {fighter[FID].health} health.");
+                while (true)
+                {
+
+                    await message.Channel.SendMessageAsync($"Your health is: {player.health}. {fighter[FID].name}'s health is: {fighter[FID].health}");
+                    int damageToPlayer = whallop.Next(0, 10);
+                    int damageToFighter = whallop.Next(1, 10);
+                    player.health -= damageToPlayer;
+                    fighter[FID].health -= damageToFighter;
+                    await message.Channel.SendMessageAsync($"\nYou take {damageToPlayer} damage.\nThe {fighter[FID].name} takes {damageToFighter} damage.");
+
+                    if (fighter[FID].health <= 0)
+                    {
+                        await message.Channel.SendMessageAsync($"THIS CANNOT BE! I AM THE MOST BROKEN FIGHTER! THE ODDS OF ME LOSING ARE NEXT TO NONE! HOW COULD {message.Author.Mention} HAVE BEATEN ME?! NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!");
+                        return;
+                    }
+                    if (player.health <= 0)
+                    {
+                        await message.Channel.SendMessageAsync($"\n\n{fighter[FID].name} kicked the shit out of you. You should have expected it.\n\n");
+                        return;
+                    }
+                }
+            }
+
+            if (command.StartsWith($"c!fight <@") && !command.EndsWith($"773261448003977226>"))
+            {
+                FID = fighter[10].ID;
+                string chosen = message.Content.TrimStart('c', '!', 'f', 'i', 'g', 'h', 't', ' ');
+                string challenger = message.Author.Mention;
+                Challenge();
+
+                async void Challenge()
+                {
+                    await message.Channel.SendMessageAsync($"\n{challenger} takes on {chosen}! They both have {fighter[FID].health} health!");
+                    while (true)
+                    {
+
+                        await message.Channel.SendMessageAsync($"{challenger}'s health is: {player.health}. {chosen}'s health is: {fighter[FID].health}");
+                        int damageToPlayer = whallop.Next(0, 10);
+                        int damageToFighter = whallop.Next(0, 10);
+                        player.health -= damageToPlayer;
+                        fighter[FID].health -= damageToFighter;
+                        await message.Channel.SendMessageAsync($"\n{challenger} takes {damageToPlayer} damage!\n{chosen} takes {damageToFighter} damage.");
+
+                        if (fighter[FID].health <= 0)
+                        {
+                            await message.Channel.SendMessageAsync($"\nIt's over! {challenger} is victorious!");
+                            return;
+                        }
+                        if (player.health <= 0)
+                        {
+                            await message.Channel.SendMessageAsync($"\nIt's over! {chosen} is victorious!");
+                            return;
+                        }
+                    }
+                }
+            }
+
+
+
 
             return Task.CompletedTask;
         }
