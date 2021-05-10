@@ -105,7 +105,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 50);
+            int randomPhilosophy = randm.Next(1, 52);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -294,12 +294,18 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"Pixie sticks are child-friendly beer bongs");
                         break;
                     case 51:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"Try to describe what color looks like to a blind man");
                         break;
                     case 52:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"Luigi's Mansion is a game where Luigi sucks and blows everything for money.");
                         break;
                     case 53:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 54:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 55:
                         message.Channel.SendMessageAsync($"");
                         break;
 
@@ -537,7 +543,7 @@ namespace Connor_Bot
                 message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/spam.png");
 
             Random Threat = new Random();
-            int randomThreat = Threat.Next(1, 12);
+            int randomThreat = Threat.Next(1, 15  );
             if (command.Equals("c!threat"))
                 switch (randomThreat)
                 {
@@ -581,22 +587,26 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"I will not steal from your house. I'll steal your house.");
                         break;
                     case 14:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($@"You won't know real lockdown until your front door is gone.");
                         break;
                     case 15:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($@"If your computer considers me a threat, then it's a lot smarter than you are.");
                         break;
                     case 16:
                         message.Channel.SendMessageAsync($@"");
                         break;
-
-
-
-
-
-
-
-
+                    case 17:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+                    case 18:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+                    case 19:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+                    case 20:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
 
 
 
