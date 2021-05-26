@@ -105,7 +105,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 52);
+            int randomPhilosophy = randm.Next(1, 53);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -124,7 +124,7 @@ namespace Connor_Bot
                     case 4:
                         message.Channel.SendMessageAsync($@"Chicken eggs are still boneless chicken");
                         break;
-
+                        
                     case 5:
                         message.Channel.SendMessageAsync($@"If you water water, it will grow");
                         break;
@@ -267,7 +267,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"are you are a necrophile if you jack off while being dead inside?\n-Thomes");
                         break;
                     case 42:
-                        message.Channel.SendFileAsync(@"C:\Users\Connor\Pictures\Connor Bot\pizza.jpg");
+                        message.Channel.SendFileAsync(@"C:\Users\Connor\OneDrive\Pictures\Connor Bot\pizza.jpg");
                         break;
                     case 43:
                         message.Channel.SendMessageAsync($"If there were no safety labels, the average iq would increase.\n-sonicatdrpepper");
@@ -300,7 +300,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"Luigi's Mansion is a game where Luigi sucks and blows everything for money.");
                         break;
                     case 53:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"The first gacha known to mankind was fishing - Thomes");
                         break;
                     case 54:
                         message.Channel.SendMessageAsync($"");
@@ -312,7 +312,7 @@ namespace Connor_Bot
                 }
             //tells you about your charm
             if (command.Equals("current charm level"))
-                message.Channel.SendFileAsync("C:/Users/Connor/Pictures/Connor Bot/i sure do exist.png");
+                message.Channel.SendFileAsync("C:/Users/Connor/OneDrive/Pictures/Connor Bot/i sure do exist.PNG");
             //gives you directions to the nearest hell
             if (command.Equals("kill me"))
                 message.Channel.SendMessageAsync("https://www.ikea.com/us/en/stores/");
@@ -540,10 +540,19 @@ namespace Connor_Bot
 
             //literally spam
             if (command.Equals("spam"))
-                message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/spam.png");
+                message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
+
+            if (command.Equals("super ultra mega spam to the extreme"))
+                message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
+
+            if (command.Equals("spamtastic"))
+                message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
+
+            if (command.Equals("true spam"))
+                message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
 
             Random Threat = new Random();
-            int randomThreat = Threat.Next(1, 15  );
+            int randomThreat = Threat.Next(1, 15);
             if (command.Equals("c!threat"))
                 switch (randomThreat)
                 {
@@ -620,40 +629,36 @@ namespace Connor_Bot
                 switch (randomNews)
                 {
                     case 1:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/man drunk die.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/man drunk die.jpg");
                         break;
                     case 2:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/druuuuugs man.png");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/druuuuugs man.png");
                         break;
                     case 3:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/brain transplant.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/brain transplant.jpg");
                         break;
                     case 4:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/Ohio.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Ohio.jpg");
                         break;
                     case 5:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/Ikea is hell.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Ikea is hell.jpg");
                         break;
                     case 6:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/Disney got BIG.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Disney got BIG.jpg");
                         break;
                     case 7:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/Baskin Robbins exposed.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Baskin Robbins exposed.jpg");
                         break;
                     case 8:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
                         break;
                     case 9:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
                         break;
                     case 10:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
                         break;
                 }
-
-            if (command.Equals("shut up"))
-                message.Channel.SendMessageAsync($@"You should know better than to use that kind of language {message.Author.Mention}.");
-
 
             if (command.Equals("kill connor bot"))
                 message.Channel.SendMessageAsync("c!deadringer");
