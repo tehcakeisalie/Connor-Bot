@@ -308,6 +308,9 @@ namespace Connor_Bot
                     case 55:
                         message.Channel.SendMessageAsync($"");
                         break;
+                    case 56:
+                        message.Channel.SendMessageAsync($"");
+                        break;
 
                 }
             //tells you about your charm
@@ -316,7 +319,18 @@ namespace Connor_Bot
             //gives you directions to the nearest hell
             if (command.Equals("kill me"))
                 message.Channel.SendMessageAsync("https://www.ikea.com/us/en/stores/");
+           
+            _client.JoinedGuild += async guild =>
+            {
+                var channel = guild.DefaultChannel;
+                await channel.SendMessageAsync("Hello fellow humans.");
+            };
 
+            _client.UserJoined += async guild =>
+            {
+                var channel = guild.Guild.DefaultChannel;
+                await channel.SendMessageAsync("Ahhh, fresh meat.");
+            };
 
             //fortune reader
             Random tarot = new Random();
