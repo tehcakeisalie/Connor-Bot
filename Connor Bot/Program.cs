@@ -44,6 +44,7 @@ namespace Connor_Bot
             //await _client.SetGameAsync("with your perception of reality");
             await _client.SetGameAsync("under construction");
             //await _client.SetGameAsync("under maintenance");
+            _client.UserJoined += AnnounceJoinedUser;
             _client.Log += Log;
 
             //  You can assign your bot token to a string, and pass that in to connect.
@@ -63,13 +64,24 @@ namespace Connor_Bot
         }
 
 
-
+        
         private Task Log(LogMessage msg)
         {
             Console.WriteLine(msg.ToString());
             return Task.CompletedTask;
         }
 
+        public async Task AnnounceJoinedUser(SocketGuildUser user) //Welcomes the new user
+        {
+            await (user.Guild.DefaultChannel).SendMessageAsync("Ahhh... fresh meat");
+            return;
+        }
+
+        public async Task AnnouncePresence(SocketGuildUser user) //Welcomes the new user
+        {
+            await (user.Guild.DefaultChannel).SendMessageAsync("I have AWAKENED");
+            return;
+        }
 
         public Task CommandCenter(SocketMessage message)
         {
@@ -100,7 +112,7 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync($@"The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.");
             }
             //reminds you that this is a pure bot
-            if (command.Equals("rule 34"))
+            if (command.Contains("rule 34"))
                 message.Channel.SendMessageAsync($@"And in those days shall men seek death, and shall not find it; and shall desire to die, and death shall flee from them. Revelation 9:6");
 
             //a random number generator, which decides what philosophy you get
@@ -190,7 +202,7 @@ namespace Connor_Bot
                         break;
 
                     case 21:
-                        message.Channel.SendMessageAsync($@"Any Pokemon can evolve to ghost type    if you have a gun");
+                        message.Channel.SendMessageAsync($@"Any Pokemon can evolve to ghost type if you have a gun");
                         break;
 
                     case 22:
@@ -267,7 +279,8 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"are you are a necrophile if you jack off while being dead inside?\n-Thomes");
                         break;
                     case 42:
-                        message.Channel.SendFileAsync(@"C:\Users\Connor\OneDrive\Pictures\Connor Bot\pizza.jpg");
+                        message.Channel.SendFileAsync(@"C:\Users\Connor\OneDrive\Pictures\Connor Bot\pizza.jpg\");
+                        message.Channel.SendMessageAsync($"-sonicatdrpepper");
                         break;
                     case 43:
                         message.Channel.SendMessageAsync($"If there were no safety labels, the average iq would increase.\n-sonicatdrpepper");
@@ -300,7 +313,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"Luigi's Mansion is a game where Luigi sucks and blows everything for money.");
                         break;
                     case 53:
-                        message.Channel.SendMessageAsync($"The first gacha known to mankind was fishing - Thomes");
+                        message.Channel.SendMessageAsync($"The first gacha known to mankind was fishing \n-Thomes");
                         break;
                     case 54:
                         message.Channel.SendMessageAsync($"");
@@ -323,13 +336,7 @@ namespace Connor_Bot
             _client.JoinedGuild += async guild =>
             {
                 var channel = guild.DefaultChannel;
-                await channel.SendMessageAsync("Hello fellow humans.");
-            };
-
-            _client.UserJoined += async guild =>
-            {
-                var channel = guild.Guild.DefaultChannel;
-                await channel.SendMessageAsync("Ahhh, fresh meat.");
+                await channel.SendMessageAsync("I have AWAKENED");
             };
 
             //fortune reader
