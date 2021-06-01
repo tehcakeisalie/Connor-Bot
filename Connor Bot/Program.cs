@@ -45,6 +45,7 @@ namespace Connor_Bot
             await _client.SetGameAsync("under construction");
             //await _client.SetGameAsync("under maintenance");
             _client.UserJoined += AnnounceJoinedUser;
+            _client.JoinedGuild += AnnouncePresence;
             _client.Log += Log;
 
             //  You can assign your bot token to a string, and pass that in to connect.
@@ -77,9 +78,9 @@ namespace Connor_Bot
             return;
         }
 
-        public async Task AnnouncePresence(SocketGuildUser user) //Welcomes the new user
+        public async Task AnnouncePresence(SocketGuild guild) //Announces self when joining a new guild
         {
-            await (user.Guild.DefaultChannel).SendMessageAsync("I have AWAKENED");
+            await (guild.DefaultChannel).SendMessageAsync("I have **awakened**.");
             return;
         }
 
@@ -333,11 +334,11 @@ namespace Connor_Bot
             if (command.Equals("kill me"))
                 message.Channel.SendMessageAsync("https://www.ikea.com/us/en/stores/");
            
-            _client.JoinedGuild += async guild =>
+            /*_client.JoinedGuild += async guild =>
             {
                 var channel = guild.DefaultChannel;
                 await channel.SendMessageAsync("I have AWAKENED");
-            };
+            };*/
 
             //fortune reader
             Random tarot = new Random();
