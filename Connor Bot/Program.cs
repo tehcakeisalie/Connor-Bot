@@ -18,7 +18,6 @@ namespace Connor_Bot
         public int health;
     };
 
-
     class Program
     {
         public static void Main(string[] args)
@@ -90,8 +89,8 @@ namespace Connor_Bot
             int lengthOfCommand = -1;
             //message filtering begins here
             //makes is to it only responds to stuff that starts with !
-            /*  if (!message.Content.StartsWith('!'))
-                  return Task.CompletedTask; */
+           /* if (!message.Content.StartsWith("c!"))
+                return Task.CompletedTask;*/
             //makes it so it doesn't respond to bots
             if (message.Author.IsBot)
                 return Task.CompletedTask;
