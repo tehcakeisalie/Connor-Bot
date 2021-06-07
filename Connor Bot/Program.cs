@@ -118,7 +118,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 53);
+            int randomPhilosophy = randm.Next(1, 54);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -317,12 +317,16 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"The first gacha known to mankind was fishing \n-Thomes");
                         break;
                     case 54:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendFileAsync(@"C:\Users\Connor\OneDrive\Pictures\Connor Bot\pizza.jpg\bait.jpg");
+                        message.Channel.SendMessageAsync($"-Thomes");
                         break;
                     case 55:
                         message.Channel.SendMessageAsync($"");
                         break;
                     case 56:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 57:
                         message.Channel.SendMessageAsync($"");
                         break;
 
@@ -624,7 +628,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"If your computer considers me a threat, then it's a lot smarter than you are.");
                         break;
                     case 16:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($@"You can't kill what doesn't bleed.");
                         break;
                     case 17:
                         message.Channel.SendMessageAsync($@"");
