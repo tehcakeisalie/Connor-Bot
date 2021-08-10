@@ -117,7 +117,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 54);
+            int randomPhilosophy = randm.Next(1, 55);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -320,7 +320,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"-Thomes");
                         break;
                     case 55:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"If two of the same species of pokemon have sex, do they shout their own name or their partners?\n-Seenmario66");
                         break;
                     case 56:
                         message.Channel.SendMessageAsync($"");
@@ -630,7 +630,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"You can't kill what doesn't bleed.");
                         break;
                     case 17:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($@"I will harvest your toes.");
                         break;
                     case 18:
                         message.Channel.SendMessageAsync($@"");
