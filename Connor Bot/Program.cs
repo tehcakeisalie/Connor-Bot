@@ -649,7 +649,7 @@ namespace Connor_Bot
 
             //gives some breaking news
             Random News = new Random();
-            int randomNews = News.Next(1, 7);
+            int randomNews = News.Next(1, 8);
             if (command.Equals("c!headline"))
                 switch (randomNews)
                 {
@@ -675,7 +675,7 @@ namespace Connor_Bot
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Baskin Robbins exposed.jpg");
                         break;
                     case 8:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/couch on the rise.jpg");
                         break;
                     case 9:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
