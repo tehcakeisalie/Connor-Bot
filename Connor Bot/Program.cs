@@ -696,10 +696,14 @@ namespace Connor_Bot
             if (command.Equals("7th grade tech"))
                 message.Channel.SendMessageAsync("Jasperactive was ass.");
 
-            if (message.Content.Contains(_client.CurrentUser.Mention))
+            var self = _client.CurrentUser.Mention;
+
+            if (message.Content.Contains(_client.CurrentUser.Mention) && !command.StartsWith($"c!fight "))
             {
                 message.Channel.SendMessageAsync($"Whomst hast called me?");
             }
+            else if (command.Equals("c!fight "+self))
+                message.Channel.SendMessageAsync($"Nice try, but you can't fight me this easily.");
 
             _player player;
             player.health = 50;
