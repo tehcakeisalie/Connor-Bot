@@ -117,7 +117,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 55);
+            int randomPhilosophy = randm.Next(1, 62);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -323,9 +323,33 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"If two of the same species of pokemon have sex, do they shout their own name or their partners?\n-Seenmario66");
                         break;
                     case 56:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"Self deprication humor doesn't make up for someone's flaws as a human being.");
                         break;
                     case 57:
+                        message.Channel.SendMessageAsync($"The unites States is more like 50 different countries all under a central government\n-sonicatdrpepper");
+                        break;
+                    case 58:
+                        message.Channel.SendMessageAsync($"Bullshit I wouldn't download a car. I just need a 3d printer.");
+                        break;
+                    case 59:
+                        message.Channel.SendMessageAsync($"Step 1. rent 3d printer\nStep 2. print 3d printer\nStep 3. return 3d printer\nStep 4. print more 3d printers with your 3d printed 3d printer\nStep 5. sell le' 3d printers\nStep 6. profit\n-Seenmario66");
+                        break;
+                    case 60:
+                        message.Channel.SendMessageAsync($"The apocalypse really did happen in 2012. This is just what hell looks like.");
+                        break;
+                    case 61:
+                        message.Channel.SendMessageAsync($"seriously, what's the deal with airline food?");
+                        break;
+                    case 62:
+                        message.Channel.SendMessageAsync($"once you start to learn how just about any technology works at it's core, you begin to wonder how this stuff hasn't fallen apart yet");
+                        break;
+                    case 63:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 64:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 65:
                         message.Channel.SendMessageAsync($"");
                         break;
 
