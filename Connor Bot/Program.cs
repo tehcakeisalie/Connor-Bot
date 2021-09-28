@@ -603,7 +603,7 @@ namespace Connor_Bot
                 message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
 
             Random Threat = new Random();
-            int randomThreat = Threat.Next(1, 15);
+            int randomThreat = Threat.Next(1, 18);
             if (command.Equals("c!threat"))
                 switch (randomThreat)
                 {
@@ -659,12 +659,15 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"I will harvest your toes.");
                         break;
                     case 18:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($@"Press shift to sprint.");
                         break;
                     case 19:
                         message.Channel.SendMessageAsync($@"");
                         break;
                     case 20:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+                    case 21:
                         message.Channel.SendMessageAsync($@"");
                         break;
 
@@ -765,7 +768,7 @@ namespace Connor_Bot
             fighter[10].ID = 10; fighter[10].name = "Chosen"; fighter[10].health = 50;
 
             if (command.Equals($"c!opponents"))
-                message.Channel.SendMessageAsync("here are y       our opponents:\n1. Glass Joe: You would have to try to lose against him.\n2. Flat-Earther. just let natural selection do it's thing.\n3. Florida Man. Careful. He may not look like it, but he could take on a crocodile on a whim.\n4. Karen. God forbid you ever actually meet one in retail.\n5. White Supremacist. He keeps asking me to define what a white supremacist is. It's you, dickhead.\n6. Twitter. One of the greatest evils out there.\n7. Xi Jinping. Would you look at that, I've been banned in China.\n8. Mike Tyson. The final boss.\n666.P3R$U3 T43 TRUT4\nto fight any of these worthy contenders, simply put: c!fight (fighter name). To fight other users, put: c!fight (ping user)! Try not to use it for offline users though, to avoid pingspam.");
+                message.Channel.SendMessageAsync("here are your opponents:\n1. Glass Joe: You would have to try to lose against him.\n2. Flat-Earther. just let natural selection do it's thing.\n3. Florida Man. Careful. He may not look like it, but he could take on a crocodile on a whim.\n4. Karen. God forbid you ever actually meet one in retail.\n5. White Supremacist. He keeps asking me to define what a white supremacist is. It's you, dickhead.\n6. Twitter. One of the greatest evils out there.\n7. Xi Jinping. Would you look at that, I've been banned in China.\n8. Mike Tyson. The final boss.\n666.P3R$U3 T43 TRUT4\nto fight any of these worthy contenders, simply put: c!fight (fighter name). To fight other users, put: c!fight (ping user)! Try not to use it for offline users though, to avoid pingspam.");
 
             if (command.Contains("pursue the truth"))
                 message.Channel.SendMessageAsync("https://sites.google.com/view/kjfdoflfsdhdklfkdasaslaskalals");
