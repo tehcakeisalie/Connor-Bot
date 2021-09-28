@@ -280,6 +280,7 @@ namespace Connor_Bot
                         break;
                     case 42:
                         message.Channel.SendFileAsync(@"C:\Users\Connor\OneDrive\Pictures\Connor Bot\pizza.jpg\");
+                        message.Channel.SendFileAsync(@"C:\Users\cjmac\OneDrive\Pictures\Connor Bot\pizza.jpg\");
                         message.Channel.SendMessageAsync($"-sonicatdrpepper");
                         break;
                     case 43:
@@ -316,7 +317,8 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"The first gacha known to mankind was fishing \n-Thomes");
                         break;
                     case 54:
-                        message.Channel.SendFileAsync(@"C:\Users\Connor\OneDrive\Pictures\Connor Bot\pizza.jpg\bait.jpg");
+                        message.Channel.SendFileAsync(@"C:\Users\Connor\OneDrive\Pictures\Connor Bot\bait.jpg");
+                        message.Channel.SendFileAsync(@"C:\Users\cjmac\OneDrive\Pictures\Connor Bot\bait.jpg");
                         message.Channel.SendMessageAsync($"-Thomes");
                         break;
                     case 55:
@@ -679,39 +681,51 @@ namespace Connor_Bot
                 {
                     case 1:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/man drunk die.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/man drunk die.jpg");
                         break;
                     case 2:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/druuuuugs man.png");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/druuuuugs man.png");
                         break;
                     case 3:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/brain transplant.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/brain transplant.jpg");
                         break;
                     case 4:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Ohio.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/Ohio.jpg");
                         break;
                     case 5:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Ikea is hell.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/Ikea is hell.jpg");
                         break;
                     case 6:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Disney got BIG.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/Disney got BIG.jpg");
                         break;
                     case 7:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Baskin Robbins exposed.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/Baskin Robbins exposed.jpg");
                         break;
                     case 8:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/couch on the rise.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/couch on the rise.jpg");
                         break;
                     case 9:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/A war breaks out.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/A war breaks out.jpg");
                         break;
                     case 10:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
                         break;
                     case 11:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
                         break;
                     case 12:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
                         break;
                 }
 
