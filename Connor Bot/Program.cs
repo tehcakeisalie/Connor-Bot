@@ -105,7 +105,7 @@ namespace Connor_Bot
             if (command.Equals("c!hello"))
                 message.Channel.SendMessageAsync($@"Hello! Get ready for a world of pain! {message.Author.Mention}");
             //tells you about a test to measure your fitness
-            else if (command.Equals("fitness"))
+            else if (command.Contains("fitness"))
             {
                 message.Channel.SendMessageAsync($@"The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.");
             }
@@ -360,7 +360,7 @@ namespace Connor_Bot
             if (command.Equals("current charm level"))
                 message.Channel.SendFileAsync("C:/Users/Connor/OneDrive/Pictures/Connor Bot/i sure do exist.PNG");
             //gives you directions to the nearest hell
-            if (command.Equals("kill me"))
+            if (command.Contains("kill me"))
                 message.Channel.SendMessageAsync("https://www.ikea.com/us/en/stores/");
            
             /*_client.JoinedGuild += async guild =>
@@ -512,7 +512,7 @@ namespace Connor_Bot
 
                 }
 
-            if (command.Equals("is there a god"))
+            if (command.StartsWith("is there a god"))
                 message.Channel.SendMessageAsync($@"There is now.");
 
             if (command.Equals("c!help"))
@@ -590,20 +590,12 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync("I am a robot with no understanding of human emotion.");
 
             //literally spam
-            if (command.Equals("spam"))
+            if (command.Contains("spam"))
                 message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
-
-            if (command.Equals("super ultra mega spam to the extreme"))
-                message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
-
-            if (command.Equals("spamtastic"))
-                message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
-
-            if (command.Equals("true spam"))
-                message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
+                message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/spam.png");
 
             Random Threat = new Random();
-            int randomThreat = Threat.Next(1, 18);
+            int randomThreat = Threat.Next(1, 19);
             if (command.Equals("c!threat"))
                 switch (randomThreat)
                 {
@@ -662,12 +654,21 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"Press shift to sprint.");
                         break;
                     case 19:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($@"I will syphon your battery even more than I already am.");
                         break;
                     case 20:
                         message.Channel.SendMessageAsync($@"");
                         break;
                     case 21:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+                    case 22:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+                    case 23:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+                    case 24:
                         message.Channel.SendMessageAsync($@"");
                         break;
 
@@ -678,7 +679,7 @@ namespace Connor_Bot
 
             //gives some breaking news
             Random News = new Random();
-            int randomNews = News.Next(1, 9);
+            int randomNews = News.Next(1, 10);
             if (command.Equals("c!headline"))
                 switch (randomNews)
                 {
@@ -719,8 +720,8 @@ namespace Connor_Bot
                         message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/A war breaks out.jpg");
                         break;
                     case 10:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
-                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/alcohol is banned.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/alcohol is banned.jpg");
                         break;
                     case 11:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
@@ -730,17 +731,21 @@ namespace Connor_Bot
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
                         message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
                         break;
+                    case 13:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
+                        break;
                 }
 
-            if (command.Equals("kill connor bot"))
+            if (command.Contains("kill connor bot"))
                 message.Channel.SendMessageAsync("c!deadringer");
 
 
-            if (command.Equals("make me hurt"))
+            if (command.Contains("make me hurt"))
                 message.Channel.SendMessageAsync("https://www.youtube.com/watch?v=441yNVdmVU4&t=0s");
 
 
-            if (command.Equals("7th grade tech"))
+            if (command.Contains("7th grade tech"))
                 message.Channel.SendMessageAsync("Jasperactive was ass.");
 
             var self = _client.CurrentUser.Mention;
