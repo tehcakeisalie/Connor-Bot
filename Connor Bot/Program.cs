@@ -357,7 +357,7 @@ namespace Connor_Bot
 
                 }
             //tells you about your charm
-            if (command.Equals("current charm level"))
+            if (command.Contains("current charm level"))
                 message.Channel.SendFileAsync("C:/Users/Connor/OneDrive/Pictures/Connor Bot/i sure do exist.PNG");
             //gives you directions to the nearest hell
             if (command.Contains("kill me"))
@@ -586,13 +586,14 @@ namespace Connor_Bot
                         break;
                 }
             //The bot reminds you it cannot feel
-            if (command.Equals("how do you feel"))
+            if (command.Contains("how do you feel"))
                 message.Channel.SendMessageAsync("I am a robot with no understanding of human emotion.");
 
             //literally spam
-            if (command.Contains("spam"))
-                message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
-                message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/spam.png");
+            if (command.Equals("spam")) { 
+            message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
+            message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/spam.png");
+            }
 
             Random Threat = new Random();
             int randomThreat = Threat.Next(1, 19);
@@ -740,6 +741,8 @@ namespace Connor_Bot
             if (command.Contains("kill connor bot"))
                 message.Channel.SendMessageAsync("c!deadringer");
 
+            if (command.Contains("is connor bot dead yet?"))
+                message.Channel.SendMessageAsync("not yet");
 
             if (command.Contains("make me hurt"))
                 message.Channel.SendMessageAsync("https://www.youtube.com/watch?v=441yNVdmVU4&t=0s");
