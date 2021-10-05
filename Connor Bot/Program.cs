@@ -680,7 +680,7 @@ namespace Connor_Bot
 
             //gives some breaking news
             Random News = new Random();
-            int randomNews = News.Next(1, 10);
+            int randomNews = News.Next(1, 11);
             if (command.Equals("c!headline"))
                 switch (randomNews)
                 {
@@ -725,8 +725,8 @@ namespace Connor_Bot
                         message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/alcohol is banned.jpg");
                         break;
                     case 11:
-                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
-                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/the CBOM is concerning.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/the CBOM is concerning.jpg");
                         break;
                     case 12:
                         message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
