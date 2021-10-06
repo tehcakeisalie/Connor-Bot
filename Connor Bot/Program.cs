@@ -516,7 +516,7 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync($@"There is now.");
 
             if (command.Equals("c!help"))
-                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nNow have fun with the shitpost of a bot I am!");
+                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!headline #(number here) - pick a specidic headline. there are currently 11.\n7. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nNow have fun with the shitpost of a bot I am!");
 
             //Connor bot will roll dice
             Random Roll = new Random();
@@ -737,6 +737,67 @@ namespace Connor_Bot
                         message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
                         break;
                 }
+            if (command.StartsWith("c!headline #"))
+            {
+                string newsnumber = message.Content.TrimStart('c', '!', 'h', 'e', 'a', 'd', 'l', 'i', 'n', 'e', ' ', '#');
+                int numberfornews = Convert.ToInt32(newsnumber);
+
+                switch (numberfornews)
+                {
+                    case 1:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/man drunk die.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/man drunk die.jpg");
+                        break;
+                    case 2:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/druuuuugs man.png");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/druuuuugs man.png");
+                        break;
+                    case 3:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/brain transplant.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/brain transplant.jpg");
+                        break;
+                    case 4:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Ohio.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/Ohio.jpg");
+                        break;
+                    case 5:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Ikea is hell.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/Ikea is hell.jpg");
+                        break;
+                    case 6:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Disney got BIG.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/Disney got BIG.jpg");
+                        break;
+                    case 7:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/Baskin Robbins exposed.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/Baskin Robbins exposed.jpg");
+                        break;
+                    case 8:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/couch on the rise.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/couch on the rise.jpg");
+                        break;
+                    case 9:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/A war breaks out.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/A war breaks out.jpg");
+                        break;
+                    case 10:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/alcohol is banned.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/alcohol is banned.jpg");
+                        break;
+                    case 11:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/the CBOM is concerning.jpg");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/the CBOM is concerning.jpg");
+                        break;
+                    case 12:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
+                        break;
+                    case 13:
+                        message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/");
+                        message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
+                        break;
+                }
+            }
 
             if (command.Contains("kill connor bot"))
                 message.Channel.SendMessageAsync("c!deadringer");
