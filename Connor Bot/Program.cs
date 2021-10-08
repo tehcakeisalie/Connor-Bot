@@ -797,8 +797,11 @@ namespace Connor_Bot
             if (command.Contains("kill connor bot"))
                 message.Channel.SendMessageAsync("c!deadringer");
 
-            if (command.Contains("is connor bot dead yet?"))
+            if (command.Contains("is connor bot dead"))
                 message.Channel.SendMessageAsync("not yet");
+
+            if (command.Equals("cool"))
+                message.Channel.SendMessageAsync("cool");
 
             if (command.Contains("make me hurt"))
                 message.Channel.SendMessageAsync("https://www.youtube.com/watch?v=441yNVdmVU4&t=0s");
