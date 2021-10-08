@@ -362,12 +362,6 @@ namespace Connor_Bot
             //gives you directions to the nearest hell
             if (command.Contains("kill me"))
                 message.Channel.SendMessageAsync("https://www.ikea.com/us/en/stores/");
-           
-            /*_client.JoinedGuild += async guild =>
-            {
-                var channel = guild.DefaultChannel;
-                await channel.SendMessageAsync("I have AWAKENED");
-            };*/
 
             //fortune reader
             Random tarot = new Random();
@@ -518,7 +512,7 @@ namespace Connor_Bot
             if (command.Equals("c!help"))
                 message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!headline #(number here) - pick a specidic headline. there are currently 11.\n7. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nNow have fun with the shitpost of a bot I am!");
 
-            //Connor bot will roll dice
+            //Connor bot will give you a magic 8 ball response
             Random Roll = new Random();
             int randomRoll = Roll.Next(1, 20);
             if (command.StartsWith("c!8ball"))
@@ -594,7 +588,7 @@ namespace Connor_Bot
             message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
             message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/spam.png");
             }
-
+            //the bot threatens you
             Random Threat = new Random();
             int randomThreat = Threat.Next(1, 19);
             if (command.Equals("c!threat"))
@@ -737,6 +731,7 @@ namespace Connor_Bot
                         message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/");
                         break;
                 }
+            //for choosing specific breaking news
             if (command.StartsWith("c!headline #"))
             {
                 string newsnumber = message.Content.TrimStart('c', '!', 'h', 'e', 'a', 'd', 'l', 'i', 'n', 'e', ' ', '#');
@@ -798,7 +793,7 @@ namespace Connor_Bot
                         break;
                 }
             }
-
+            //couple random text inputs
             if (command.Contains("kill connor bot"))
                 message.Channel.SendMessageAsync("c!deadringer");
 
@@ -812,8 +807,8 @@ namespace Connor_Bot
             if (command.Contains("7th grade tech"))
                 message.Channel.SendMessageAsync("Jasperactive was ass.");
 
+            //determines what happens when people ping Connor bot
             var self = _client.CurrentUser.Mention;
-
             if (message.Content.Contains(_client.CurrentUser.Mention) && !command.StartsWith($"c!fight "))
             {
                 message.Channel.SendMessageAsync($"Whomst hast called me?");
@@ -821,6 +816,7 @@ namespace Connor_Bot
             else if (command.Equals("c!fight "+self))
                 message.Channel.SendMessageAsync($"Nice try, but you can't fight me this easily.");
 
+            //Oh boy. This is where the code for the c!fight command begins
             _player player;
             player.health = 50;
 
@@ -843,7 +839,7 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync("https://sites.google.com/view/kjfdoflfsdhdklfkdasaslaskalals");
             if (command.Equals("c!what's in the box?"))
                 message.Channel.SendMessageAsync($"Doest thou know what wrath you shall incur on this world?\n https://sites.google.com/view/kjljdhlkasjklskjhhdfjkdhkhdfkk");
-
+            //sets the correct fighter id depending on which fighter the user chooses
             int FID = fighter[1].ID;
             Random whallop = new Random();
             if (command.Equals("c!fight glass joe"))
@@ -891,7 +887,7 @@ namespace Connor_Bot
                 FID = fighter[9].ID;
                 Fight2();
             }
-
+            //this is for fighting someone shown on the c!opponents roster
             async void Fight()
             {
                 await message.Channel.SendMessageAsync($"\nYou take on {fighter[FID].name}! They have {fighter[FID].health} health!");
@@ -917,7 +913,7 @@ namespace Connor_Bot
                     }
                 }
             }
-
+            //this is for fighting other players
             async void Fight2()
             {
                 await message.Channel.SendMessageAsync($"\nYou stand before {fighter[FID].name}. His godlike form contains {fighter[FID].health} health.");
@@ -943,7 +939,7 @@ namespace Connor_Bot
                     }
                 }
             }
-
+            //this is for when someone finds the secret fight. It's probably ineffecient, but I wanted this fight to display diferent text, so I just did this.
             if (command.StartsWith($"c!fight <@") && !command.EndsWith($"773261448003977226>"))
             {
                 FID = fighter[10].ID;
