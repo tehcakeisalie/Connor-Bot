@@ -72,13 +72,13 @@ namespace Connor_Bot
 
         public async Task AnnounceJoinedUser(SocketGuildUser user) //Welcomes the new user
         {
-            await (user.Guild.DefaultChannel).SendMessageAsync("Ahhh... fresh meat");
+            await (user.Guild.DefaultChannel).SendMessageAsync("Ahhh... fresh meat");            
             return;
         }
 
         public async Task AnnouncePresence(SocketGuild guild) //Announces self when joining a new guild
         {
-            await (guild.DefaultChannel).SendMessageAsync("I have **awakened**.");
+            await (guild.DefaultChannel).SendMessageAsync("I have **awakened**.");            
             return;
         }
 
@@ -517,7 +517,7 @@ namespace Connor_Bot
                 message.Channel.SendMessageAsync($@"There is now.");
 
             if (command.Equals("c!help"))
-                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!headline #(number here) - pick a specidic headline. there are currently 11.\n7. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command.\nNow have fun with the shitpost of a bot I am!");
+                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!headline #(number here) - pick a specidic headline. there are currently 11.\n7. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command\nIf my status says *under maintinence*, I am just that: under maintinence and only online for testing.\nNow have fun with the shitpost of a bot I am!");
 
             //Connor bot will give you a magic 8 ball response
             Random Roll = new Random();
@@ -595,6 +595,12 @@ namespace Connor_Bot
             message.Channel.SendFileAsync($@"C:/Users/Connor/OneDrive/Pictures/Connor Bot/spam.png");
             message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/spam.png");
             }
+
+            if (command.Equals("c!users"))
+            {
+               
+            }
+
             //the bot threatens you
             Random Threat = new Random();
             int randomThreat = Threat.Next(1, 19);
