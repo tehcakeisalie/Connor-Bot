@@ -43,6 +43,7 @@ namespace Connor_Bot
             //await _client.SetGameAsync("under maintenance");
             _client.UserJoined += AnnounceJoinedUser;
             _client.JoinedGuild += AnnouncePresence;
+            _client.UserLeft += Goodbye;
             _client.Log += Log;
 
             //  You can assign your bot token to a string, and pass that in to connect.
@@ -78,6 +79,12 @@ namespace Connor_Bot
         public async Task AnnouncePresence(SocketGuild guild) //Announces self when joining a new guild
         {
             await (guild.DefaultChannel).SendMessageAsync("I have **awakened**.");
+            return;
+        }
+
+        public async Task Goodbye(SocketGuildUser them) //fires when someone leaves(by kick or by choice)
+        {
+            await (them.Guild.DefaultChannel).SendMessageAsync("Someone was overtaken by fear and left.");
             return;
         }
 
