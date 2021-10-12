@@ -99,7 +99,7 @@ namespace Connor_Bot
             //makes it so it doesn't respond to bots
             if (message.Author.IsBot)
                 return Task.CompletedTask;
-            //dunno. the guy online skipped over this
+            //I think this makes it so spaces are not allowed in commands
             /* if (message.Content.Contains(' '))
                 lengthOfCommand = message.Content.IndexOf(' ');
              else*/
