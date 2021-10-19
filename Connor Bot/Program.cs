@@ -929,7 +929,7 @@ namespace Connor_Bot
                     }
                 }
             }
-            //this is for fighting other players
+            //this is for when someone finds the secret fight. It's probably ineffecient, but I wanted this fight to display diferent text, so I just did this.
             async void Fight2()
             {
                 await message.Channel.SendMessageAsync($"\nYou stand before {fighter[FID].name}. His godlike form contains {fighter[FID].health} health.");
@@ -955,7 +955,7 @@ namespace Connor_Bot
                     }
                 }
             }
-            //this is for when someone finds the secret fight. It's probably ineffecient, but I wanted this fight to display diferent text, so I just did this.
+            //this is for fighting other players
             if (command.StartsWith($"c!fight <@") && !command.EndsWith($"773261448003977226>"))
             {
                 FID = fighter[10].ID;
