@@ -124,7 +124,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 62);
+            int randomPhilosophy = randm.Next(1, 66);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -353,12 +353,26 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"once you start to learn how just about any technology works at it's core, you begin to wonder how this stuff hasn't fallen apart yet");
                         break;
                     case 63:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"The majority of people who make vaccines are autistic. So, autism caused vaccines\n-Thomes");
                         break;
                     case 64:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"People don't become more polite. The rudeness just becomes more subtle.");
                         break;
                     case 65:
+                        message.Channel.SendMessageAsync($"The opposite of con is pro. So that means the opposite of constitution...");
+                        break;
+                    case 66:
+                        message.Channel.SendFileAsync(@"C:\Users\Connor\OneDrive\Pictures\Connor Bot\log.jpg");
+                        message.Channel.SendFileAsync(@"C:\Users\cjmac\OneDrive\Pictures\Connor Bot\log.jpg");
+                        message.Channel.SendMessageAsync($"-sonicatdrpepper");
+                        break;
+                    case 67:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 68:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 69:
                         message.Channel.SendMessageAsync($"");
                         break;
 
