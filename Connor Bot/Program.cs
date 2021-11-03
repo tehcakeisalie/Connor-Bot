@@ -78,7 +78,7 @@ namespace Connor_Bot
 
         public async Task AnnouncePresence(SocketGuild guild) //Announces self when joining a new guild
         {
-            await (guild.DefaultChannel).SendMessageAsync("I have **awakened**.");            
+            await (guild.DefaultChannel).SendMessageAsync("I have **awakened**.\ntype c!help for commands");            
             return;
         }
 
