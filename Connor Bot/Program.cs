@@ -124,7 +124,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 66);
+            int randomPhilosophy = randm.Next(1, 67);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -367,12 +367,15 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"-sonicatdrpepper");
                         break;
                     case 67:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"if there is ice cream in zootopia, who tf is getting milked ?\n-Thomes");
                         break;
                     case 68:
                         message.Channel.SendMessageAsync($"");
                         break;
                     case 69:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 70:
                         message.Channel.SendMessageAsync($"");
                         break;
 
@@ -610,10 +613,109 @@ namespace Connor_Bot
             message.Channel.SendFileAsync($@"C:/Users/cjmac/OneDrive/Pictures/Connor Bot/spam.png");
             }
 
-            if (command.Equals("c!users"))
-            {
-               
-            }
+            Random itsMe = new Random();
+            int randomPredict = itsMe.Next(1, 17);
+            if (command.Equals("c!predictme"))
+                switch (randomPredict)
+                {
+                    case 1:
+                        message.Channel.SendMessageAsync($@"You formed your entire online personality around a running joke.");
+                        break;
+                    case 2:
+                        message.Channel.SendMessageAsync($@"You make a bunch of jokes about being the evil one, or the crazy one, but you're actually pretty sweet IRL.");
+                        break;
+                    case 3:
+                        message.Channel.SendMessageAsync($@"You self-depricate constantly because you view it as a social get-out-of-jail-free card.");
+                        break;
+                    case 4:
+                        message.Channel.SendMessageAsync($@"You are a bot. Plain and simple.");
+                        break;
+                    case 5:
+                        message.Channel.SendMessageAsync($@"You keep posting weeb memes that no one really knows, but are still kinda funny anyways.");
+                        break;
+                    case 6:
+                        message.Channel.SendMessageAsync($@"You are obsessed with that one game. It's concerning.");
+                        break;
+                    case 7:
+                        message.Channel.SendMessageAsync($@"You're always idle.");
+                        break;
+                    case 8:
+                        message.Channel.SendMessageAsync($@"You're always on do not disturb.");
+                        break;
+                    case 9:
+                        message.Channel.SendMessageAsync($@"You've formed your entire online personality around your profile picture.");
+                        break;
+                    case 10:
+                        message.Channel.SendMessageAsync($@"You don't talk much. A friend invited you here, but you don't really know anyone, so you mostly just read.");
+                        break;
+                    case 11:
+                        message.Channel.SendMessageAsync($@"You're a fake account made to troll people.");
+                        break;
+                    case 12:
+                        message.Channel.SendMessageAsync($@"You're a furry.");
+                        break;
+                    case 13:
+                        message.Channel.SendMessageAsync($@"You're kind of obsessed with weapons from the first 2 world wars.");
+                        break;
+                    case 14:
+                        message.Channel.SendMessageAsync($@"You're the artist of the server");
+                        break;
+                    case 15:
+                        message.Channel.SendMessageAsync($@"You have an entire channel dedicated to the random stuff you post.");
+                        break;
+                    case 16:
+                        message.Channel.SendMessageAsync($@"You're the linux user.");
+                        break;
+                    case 17:
+                        message.Channel.SendMessageAsync($@"Despite the fact that you don't actually know how stuff works, you're still the go-to IT because you know more than anyone else.");
+                        break;
+                    case 18:
+                        message.Channel.SendMessageAsync($@"You play devil's advocate anytime someone says opinion because it's fun.");
+                        break;
+                    case 19:
+                        message.Channel.SendMessageAsync($@"Whether it's intentional or not, drama seems to follow you.");
+                        break;
+                    case 20:
+                        message.Channel.SendMessageAsync($@"You're on Discord right now because you're procrastinating.");
+                        break;
+                    case 21:
+                        message.Channel.SendMessageAsync($@"You ironically browse 4chan.");
+                        break;
+                    case 22:
+                        message.Channel.SendMessageAsync($@"You're the one that posts pictures of food you cook. It honestly looks good.");
+                        break;
+                    case 23:
+                        message.Channel.SendMessageAsync($@"You complain about aspects of your life that aren't really hard to deal with. It just feels easier to deal with when you complain.");
+                        break;
+                    case 24:
+                        message.Channel.SendMessageAsync($@"You're the chill one. Easy to hang out with.");
+                        break;
+                    case 25:
+                        message.Channel.SendMessageAsync($@"You're actually older than everyone thought you were. Doesn't change much, though.");
+                        break;
+                    case 26:
+                        message.Channel.SendMessageAsync($@"Your mental health is rapidly decreasing, and you're making it almost impossible for people to tell.");
+                        break;
+                    case 27:
+                        message.Channel.SendMessageAsync($@"You're going to get charged with public indecency someday");
+                        break;
+                    case 28:
+                        message.Channel.SendMessageAsync($@"You're a Discord mod.");
+                        break;
+                    case 29:
+                        message.Channel.SendMessageAsync($@"You're the one who will ping everyone over a single meme you posted.");
+                        break;
+                    case 30:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+                    case 31:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+                    case 32:
+                        message.Channel.SendMessageAsync($@"");
+                        break;
+
+                }
 
             //the bot threatens you
             Random Threat = new Random();
