@@ -631,7 +631,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"You are a bot. Plain and simple.");
                         break;
                     case 5:
-                        message.Channel.SendMessageAsync($@"You keep posting weeb memes that no one really knows, but are still kinda funny anyways.");
+                        message.Channel.SendMessageAsync($@"You keep posting random weeb memes.");
                         break;
                     case 6:
                         message.Channel.SendMessageAsync($@"You are obsessed with that one game. It's concerning.");
@@ -667,7 +667,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"You're the linux user.");
                         break;
                     case 17:
-                        message.Channel.SendMessageAsync($@"Despite the fact that you don't actually know how stuff works, you're still the go-to IT because you know more than anyone else.");
+                        message.Channel.SendMessageAsync($@"You're the IT.");
                         break;
                     case 18:
                         message.Channel.SendMessageAsync($@"You play devil's advocate anytime someone says opinion because it's fun.");
@@ -691,7 +691,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"You're the chill one. Easy to hang out with.");
                         break;
                     case 25:
-                        message.Channel.SendMessageAsync($@"You're actually older than everyone thought you were. Doesn't change much, though.");
+                        message.Channel.SendMessageAsync($@"You're a streamer.");
                         break;
                     case 26:
                         message.Channel.SendMessageAsync($@"Your mental health is rapidly decreasing, and you're making it almost impossible for people to tell.");
