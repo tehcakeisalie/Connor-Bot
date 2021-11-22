@@ -728,7 +728,7 @@ namespace Connor_Bot
 
             //the bot threatens you
             Random Threat = new Random();
-            int randomThreat = Threat.Next(1, 19);
+            int randomThreat = Threat.Next(1, 20);
             if (command.Equals("c!threat"))
                 switch (randomThreat)
                 {
@@ -790,7 +790,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"I will syphon your battery even more than I already am.");
                         break;
                     case 20:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($@"Your RAM is mine.");
                         break;
                     case 21:
                         message.Channel.SendMessageAsync($@"");
