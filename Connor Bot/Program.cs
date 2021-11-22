@@ -124,7 +124,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 67);
+            int randomPhilosophy = randm.Next(1, 70);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -370,12 +370,21 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"if there is ice cream in zootopia, who tf is getting milked ?\n-Thomes");
                         break;
                     case 68:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"I wonder if the lack of glasses in old times were the cause of some myths and legends\n-Seenmario66");
                         break;
                     case 69:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"People say school doesn't teach you how to do your taxes, but they're wrong. It's called creative writing class.");
                         break;
                     case 70:
+                        message.Channel.SendMessageAsync($"it is impossible to stand backwards on stairs\n-Seenmario66");
+                        break;
+                    case 71:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 72:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 73:
                         message.Channel.SendMessageAsync($"");
                         break;
 
@@ -625,7 +634,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"You make a bunch of jokes about being the evil one, or the crazy one, but you're actually pretty sweet IRL.");
                         break;
                     case 3:
-                        message.Channel.SendMessageAsync($@"You self-depricate constantly because you view it as a social get-out-of-jail-free card.");
+                        message.Channel.SendMessageAsync($@"No one on the server even really knows who you are.");
                         break;
                     case 4:
                         message.Channel.SendMessageAsync($@"You are a bot. Plain and simple.");
