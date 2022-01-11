@@ -1091,7 +1091,7 @@ namespace Connor_Bot
                     }
                     if (player.health <= 0)
                     {
-                        await message.Channel.SendMessageAsync($"\n\n{fighter[FID].name} kicked the shit out of you. You should have expected it.\n\n");
+                        await message.Channel.SendMessageAsync($"\n\n{fighter[FID].name} kicked the shit out of you. As expected.\n\n");
                         return;
                     }
                 }
