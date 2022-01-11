@@ -124,7 +124,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 70);
+            int randomPhilosophy = randm.Next(1, 76);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -379,12 +379,27 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"it is impossible to stand backwards on stairs\n-Seenmario66");
                         break;
                     case 71:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"Japan't\n-Thomes");
                         break;
                     case 72:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"The shonen genre is like porn. You skip to the good part\n-Nikolai");
                         break;
                     case 73:
+                        message.Channel.SendMessageAsync($"Anyone can hold their breath for the rest of their life.");
+                        break;
+                    case 74:
+                        message.Channel.SendMessageAsync($"Your car keys have done more traveling than your car.");
+                        break;
+                    case 75:
+                        message.Channel.SendMessageAsync($"Donkey Kong has an ability to make his teeth appear and dissapear.");
+                        break;
+                    case 76:
+                        message.Channel.SendMessageAsync($"We could probably list all the Mario games where you can perform some sort of violation of the Geneva Convention.");
+                        break;
+                    case 77:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 78:
                         message.Channel.SendMessageAsync($"");
                         break;
 
