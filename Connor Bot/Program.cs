@@ -108,6 +108,11 @@ namespace Connor_Bot
             command = message.Content.Substring(0, lengthOfCommand - 0).ToLower();
 
             //commands begin here
+
+            //the help command. It gives you a list of Connor bot's main functions.
+            if (command.Equals("c!help"))
+                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!headline #(number here) - pick a specidic headline. there are currently 13.\n7.c!predictme - I'll try to predict what kind of Discord user you are.\n10. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command\nIf my status says *under maintinence*, I am just that: under maintinence and only online for testing.\nNow have fun with the shitpost of a bot I am!");
+
             //the fist line I ever wrote. responds to !hello
             if (command.Equals("c!hello"))
                 message.Channel.SendMessageAsync($@"Hello! Get ready for a world of pain! {message.Author.Mention}");
@@ -560,9 +565,6 @@ namespace Connor_Bot
             if (command.StartsWith("is there a god"))
                 message.Channel.SendMessageAsync($@"There is now.");
 
-            if (command.Equals("c!help"))
-                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!headline #(number here) - pick a specidic headline. there are currently 13.\n7.c!predictme - I'll try to predict what kind of Discord user you are.\n10. c!opponents - face off against challengers in a battle of complete random chance! Update: you can now fight other users!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command\nIf my status says *under maintinence*, I am just that: under maintinence and only online for testing.\nNow have fun with the shitpost of a bot I am!");
-
             //Connor bot will give you a magic 8 ball response
             Random Roll = new Random();
             int randomRoll = Roll.Next(1, 20);
@@ -652,7 +654,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"You make a bunch of jokes about being the evil one, or the crazy one, but you're actually pretty sweet IRL.");
                         break;
                     case 3:
-                        message.Channel.SendMessageAsync($@"No one on the server even really knows who you are.");
+                        message.Channel.SendMessageAsync($@"No one on the server actually knows who you are.");
                         break;
                     case 4:
                         message.Channel.SendMessageAsync($@"You are a bot. Plain and simple.");
@@ -697,7 +699,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"You're the IT.");
                         break;
                     case 18:
-                        message.Channel.SendMessageAsync($@"You play devil's advocate anytime someone says opinion because it's fun.");
+                        message.Channel.SendMessageAsync($@"You play devil's advocate anytime someone says an opinion because it's fun.");
                         break;
                     case 19:
                         message.Channel.SendMessageAsync($@"Whether it's intentional or not, drama seems to follow you.");
@@ -746,7 +748,7 @@ namespace Connor_Bot
 
             //the bot threatens you
             Random Threat = new Random();
-            int randomThreat = Threat.Next(1, 20);
+            int randomThreat = Threat.Next(1, 21);
             if (command.Equals("c!threat"))
                 switch (randomThreat)
                 {
@@ -772,7 +774,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"Don't test me. I have more connections than your fuse box.");
                         break;
                     case 8:
-                        message.Channel.SendMessageAsync($@"Don't think I won't sneak over and steal all of your salsa.");
+                        message.Channel.SendMessageAsync($@"I know your browsing history.");
                         break;
                     case 9:
                         message.Channel.SendMessageAsync($@"I know how to summon hitman bot.");
@@ -790,7 +792,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"I will not steal from your house. I'll steal your house.");
                         break;
                     case 14:
-                        message.Channel.SendMessageAsync($@"You won't know real lockdown until your front door is gone.");
+                        message.Channel.SendMessageAsync($@"You won't know real lockdown until your front door is replaced with a brick wall.");
                         break;
                     case 15:
                         message.Channel.SendMessageAsync($@"If your computer considers me a threat, then it's a lot smarter than you are.");
@@ -811,7 +813,7 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($@"Your RAM is mine.");
                         break;
                     case 21:
-                        message.Channel.SendMessageAsync($@"");
+                        message.Channel.SendMessageAsync($@"VPNs don't stop me.");
                         break;
                     case 22:
                         message.Channel.SendMessageAsync($@"");
@@ -1008,7 +1010,7 @@ namespace Connor_Bot
             fighter[10].ID = 10; fighter[10].name = "Chosen"; fighter[10].health = 50;
 
             if (command.Equals($"c!opponents"))
-                message.Channel.SendMessageAsync("here are your opponents:\n1. Glass Joe: You would have to try to lose against him.\n2. Flat-Earther. just let natural selection do it's thing.\n3. Florida Man. Careful. He may not look like it, but he could take on a crocodile on a whim.\n4. Karen. God forbid you ever actually meet one in retail.\n5. White Supremacist. He keeps asking me to define what a white supremacist is. It's you, dickhead.\n6. Twitter. One of the greatest evils out there.\n7. Xi Jinping. Would you look at that, I've been banned in China.\n8. Mike Tyson. The final boss.\n666.P3R$U3 T43 TRUT4\nto fight any of these worthy contenders, simply put: c!fight (fighter name). To fight other users, put: c!fight (ping user)! Try not to use it for offline users though, to avoid pingspam.");
+                message.Channel.SendMessageAsync("here are your opponents:\n1. Glass Joe: You would have to try to lose against him.\n2. Flat-Earther. just let natural selection do it's thing.\n3. Florida Man. Careful. He may not look like it, but he could take on a crocodile on a whim.\n4. Karen. God forbid you ever actually meet one in retail.\n5. White Supremacist. He keeps asking me to define what a white supremacist is. It's you, dickhead.\n6. Twitter. One of the greatest evils out there.\n7. Xi Jinping. Would you look at that, I've been banned in China.\n8. Mike Tyson. The final boss.\n666.P3R$U3 T43 TRUT4\nto fight any of these worthy contenders, simply put: c!fight (fighter name). To fight other users, put: c!fight (ping user)!");
 
             if (command.Contains("pursue the truth"))
                 message.Channel.SendMessageAsync("https://sites.google.com/view/kjfdoflfsdhdklfkdasaslaskalals");
@@ -1118,8 +1120,12 @@ namespace Connor_Bot
             if (command.StartsWith($"c!fight <@") && !command.EndsWith($"773261448003977226>"))
             {
                 FID = fighter[10].ID;
-                string chosen = message.Content.TrimStart('c', '!', 'f', 'i', 'g', 'h', 't', ' ');
-                string challenger = message.Author.Mention;
+                string stringID = message.Content.TrimStart('c', '!', 'f', 'i', 'g', 'h', 't', ' ', '<', '@').TrimEnd('>');
+                ulong userID = Convert.ToUInt64(stringID);
+                SocketUser almostUser = _client.GetUser(userID);
+                string badChosen = Convert.ToString(almostUser);
+                string chosen = badChosen.Substring(0, badChosen.LastIndexOf("#"));
+                string challenger = message.Author.Username;
                 Challenge();
 
                 async void Challenge()
