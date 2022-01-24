@@ -124,7 +124,7 @@ namespace Connor_Bot
 
             //a random number generator, which decides what philosophy you get
             Random randm = new Random();
-            int randomPhilosophy = randm.Next(1, 76);
+            int randomPhilosophy = randm.Next(1, 77);
             if (command.Equals("c!philosophy"))
                 switch (randomPhilosophy)
                 {
@@ -397,9 +397,12 @@ namespace Connor_Bot
                         message.Channel.SendMessageAsync($"We could probably list all the Mario games where you can perform some sort of violation of the Geneva Convention.");
                         break;
                     case 77:
-                        message.Channel.SendMessageAsync($"");
+                        message.Channel.SendMessageAsync($"What if aliens invaded earth, with the intent to look exactly like humans(invasion of the body snatchers style), and so they tried to study humans, but ended up studying movies and TV? We would literally be invaded by tropes and cliches.");
                         break;
                     case 78:
+                        message.Channel.SendMessageAsync($"");
+                        break;
+                    case 79:
                         message.Channel.SendMessageAsync($"");
                         break;
 
