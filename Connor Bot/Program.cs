@@ -38,8 +38,8 @@ namespace Connor_Bot
         {
             _client = new DiscordSocketClient();
             _client.MessageReceived += CommandCenter;
-            //await _client.SetGameAsync("with your perception of reality");
-            await _client.SetGameAsync("under construction");
+            await _client.SetGameAsync("with your perception of reality");
+            //await _client.SetGameAsync("under construction");
             //await _client.SetGameAsync("under maintenance");
             _client.UserJoined += AnnounceJoinedUser;
             _client.JoinedGuild += AnnouncePresence;
