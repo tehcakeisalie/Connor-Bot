@@ -111,7 +111,7 @@ namespace Connor_Bot
 
             //the help command. It gives you a list of Connor bot's main functions.
             if (command.Equals("c!help"))
-                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!headline #(number here) - pick a specidic headline. there are currently 13.\n7.c!predictme - I'll try to predict what kind of Discord user you are.\n10. c!opponents - face off against challengers or even other users in a battle of complete random chance!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command\nIf my status says *under maintinence*, I am just that: under maintinence and only online for testing.\nNow have fun with the shitpost of a bot I am!");
+                message.Channel.SendMessageAsync("1. c!philisophy - hear some mind-blowing philosophy\n2. c!fortune - get your fortune told\n3. c!8ball - ask the magic 8-ball a yes or no question\n4. c!threat - I will threaten you.\n5. c!headline - get the latest news!\n6. c!headline #(number here) - pick a specidic headline. there are currently 13.\n7.c!predictme - I'll try to predict what kind of Discord user you are.\n8. c!opponents - face off against challengers or even other users in a battle of complete random chance!\nremember, there's a few secret text imputs that can have varying responses!\nalso remember, my creator won't have his computer on all the time, so check to see if I'm online before entering a command\nIf my status says *under maintinence*, I am just that: under maintinence and only online for testing.\nNow have fun with the shitpost of a bot I am!");
 
             //the fist line I ever wrote. responds to !hello
             if (command.Equals("c!hello"))
@@ -1059,7 +1059,7 @@ namespace Connor_Bot
                 FID = fighter[8].ID;
                 Fight();
             }
-            if (command.Equals("c!fight connor bot"))
+            if (command.Equals("c!fight true god"))
             {
                 FID = fighter[9].ID;
                 Fight2();
