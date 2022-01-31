@@ -1005,7 +1005,15 @@ namespace Connor_Bot
             _player player;
             player.health = 50;
 
-            _player[] fighter = new _player[11];
+            var chnl = message.Channel as SocketGuildChannel;
+            var guildID = chnl.Guild.Id;
+            ulong guildIDD = Convert.ToUInt64(guildID);
+            var guild = _client.GetGuild(guildIDD);
+            var uselessNumber = guild?.MemberCount;
+            var memberCount = Convert.ToInt32(uselessNumber);
+
+
+            _player[] fighter = new _player[12];
             fighter[1].ID = 1; fighter[1].name = "Glass Joe"; fighter[1].health = 5;
             fighter[2].ID = 2; fighter[2].name = "Flat-Earther"; fighter[2].health = 15;
             fighter[3].ID = 3; fighter[3].name = "Florida Man"; fighter[3].health = 20;
@@ -1016,9 +1024,10 @@ namespace Connor_Bot
             fighter[8].ID = 8; fighter[8].name = "Mike Tyson"; fighter[8].health = 50;
             fighter[9].ID = 9; fighter[9].name = "Connor bot"; fighter[9].health = 1000;
             fighter[10].ID = 10; fighter[10].name = "Chosen"; fighter[10].health = 50;
+            fighter[11].ID = 11; fighter[11].name = "Everyone"; fighter[11].health = memberCount*50;
 
             if (command.Equals($"c!opponents"))
-                message.Channel.SendMessageAsync("here are your opponents:\n1. Glass Joe: You would have to try to lose against him.\n2. Flat-Earther. just let natural selection do it's thing.\n3. Florida Man. Careful. He may not look like it, but he could take on a crocodile on a whim.\n4. Karen. God forbid you ever actually meet one in retail.\n5. White Supremacist. He keeps asking me to define what a white supremacist is. It's you, dickhead.\n6. Twitter. One of the greatest evils out there.\n7. Xi Jinping. Would you look at that, I've been banned in China.\n8. Mike Tyson. The final boss.\n666.P3R$U3 T43 TRUT4\nto fight any of these worthy contenders, simply put: c!fight (fighter name). To fight other users, put: c!fight (ping user)!");
+                message.Channel.SendMessageAsync("here are your opponents:\n1. Glass Joe: You would have to try to lose against him.\n2. Flat-Earther. just let natural selection do it's thing.\n3. Florida Man. Careful. He may not look like it, but he could take on a crocodile on a whim.\n4. Karen. God forbid you ever actually meet one in retail.\n5. White Supremacist. He keeps asking me to define what a white supremacist is. It's you, dickhead.\n6. Twitter. One of the greatest evils out there.\n7. Xi Jinping. Would you look at that, I've been banned in China.\n8. Mike Tyson. The final boss.\n9. Everyone. The combined power of everyone on the server.\n666.P3R$U3 T43 TRUT4\nto fight any of these worthy contenders, simply put: c!fight (fighter name). To fight other users, put: c!fight (ping user)!");
 
             if (command.Contains("pursue the truth"))
                 message.Channel.SendMessageAsync("https://sites.google.com/view/kjfdoflfsdhdklfkdasaslaskalals");
@@ -1065,6 +1074,11 @@ namespace Connor_Bot
             if (command.Equals("c!fight mike tyson"))
             {
                 FID = fighter[8].ID;
+                Fight();
+            }
+            if (command.Equals("c!fight everyone"))
+            {
+                FID = fighter[11].ID;
                 Fight();
             }
             if (command.Equals("c!fight true god"))
